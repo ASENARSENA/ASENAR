@@ -1,7 +1,5 @@
 <?php 
- /**
- * 
- */
+
  class productos_model extends CI_Model
  {
  	
@@ -17,7 +15,7 @@
     	->select("idProductos,ProdNombre,ProdImagen,CatNombre,ProdDescripcion")
     	->from("Productos")
     	->order_by("idProductos","asc")
-    	->join("categorias","productos.ProdCategoria=categorias.CatNombre")
+    	->join("categorias","productos.ProdCategoria=categorias.idCategoria")
     	->get();
     	return $sql->result();
     }

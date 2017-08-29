@@ -17,7 +17,7 @@
 						
 						<div class="col-lg-12 col-md-12">
 							<div class="card">
-	                            <div class="card-header" data-background-color="orange">
+	                            <div class="card-header" style="background: #dd2c00">
 	                                <h4 class="title">Listado de Productos</h4>
 	                                <p class="category">Desayuno</p>
 	                            </div>

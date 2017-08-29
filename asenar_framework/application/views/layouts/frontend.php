@@ -1,36 +1,31 @@
 <!doctype html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url();?>public/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="<?php echo base_url();?>public/img/logo.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url() ?>public/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="<?php echo base_url() ?>public/img/logo.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title>ASENAR</title>
+    <title>Restaurant</title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
-         Fonts and icons     -->
+        <!-- Fonts and icons     -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
     <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons" >
 
     <!-- CSS Files -->
-    <link href="<?php echo base_url();?>public/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>public/css/material-kit.css" rel="stylesheet"/>
-    <!--<link href="../assets/css/materialize.min.css" rel="stylesheet"/>-->
-    <link href="<?php echo base_url();?>public/css/miestilo.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/demo.css">
-    <style type="text/css">
-        body{
-            position: relative;
-        }
-        .seccion{
-            padding-top: 70px;
-        }
-    </style>
+
+    <link href="<?php echo base_url() ?>public/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="<?php echo base_url() ?>public/css/material.min.css" rel="stylesheet" />
+    <link href="<?php echo base_url() ?>public/css/material-kit.css" rel="stylesheet"/>
+    <!--<link href="../<?php echo base_url() ?>public/css/materialize.min.css" rel="stylesheet"/>-->
+    <link href="<?php echo base_url() ?>public/css/miestilo.css" rel="stylesheet" />
+    <link href="<?php echo base_url() ?>public/css/colores.css" rel="stylesheet" />
+   
 </head>
 <body class="landing-page" data-spy="scroll" data-target="#registrar">
     <nav class="navbar navbar-transparent navbar-absolute">
@@ -45,7 +40,6 @@
                 <a class="navbar-brand" href="#">ASENAR</a>
             </div>
             <div class="collapse navbar-collapse" id="navigation-example">
-
                         <form class="navbar-form navbar-left">
                             <div class="form-primary">
                                <input type="text" class="form-control col-md-8" placeholder="Buscar">
@@ -64,7 +58,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url();?>Acceso/login">
+                        <a href="<?= base_url()?>acceso/login">
                             <i class="material-icons">person</i> Iniciar Sesion
                         </a>
                     </li>
@@ -92,31 +86,53 @@
             </div>
         </div>
     </nav>
+     <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel" style="-webkit-box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);">
+  <!-- Overlay -->
+  <div class="overlay"></div>
 
-    <!-- Contenido del Cuerpo -->
-     <div class="wrapper">
-            <div class="header header-filter" style="background-image: url('http://casamarianorestaurante.com/wp-content/uploads/2015/09/fondo-madera-casa-mariano.jpg');">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h1 class="title">Realiza tu pedido rapido y eficaz </h1>
-                            <h4>Descarga la App 1134021 y comienza a cenar, ya disponible en la PlayStore</h4>
-                            <br/>
-                            <a href="#registrar" class="btn btn-danger btn-raised btn-lg">
-                                <i class=""></i> ¡¡¡Pide tu plato ya!!
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>   
-        </div>
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#bs-carousel" data-slide-to="1"></li>
+    <li data-target="#bs-carousel" data-slide-to="2"></li>
+  </ol>
+  
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item slides active">
+      <div class="slide-1"></div>
+      <div class="hero">
+        <hgroup>
+            <img src="https://media-cdn.tripadvisor.com/media/photo-o/03/d8/b0/ce/restaurante.jpg" style="height: 600px; width: 100%" alt="">
+        </hgroup>
+      </div>
+    </div>
+    <div class="item slides">
+      <div class="slide-2"></div>
+      <div class="hero">        
+        <hgroup>
+            <img src="https://media-cdn.tripadvisor.com/media/photo-o/03/d8/b0/ce/restaurante.jpg" style="height: 600px; width: 100%" alt="">
+        </hgroup>       
+         </div>
+    </div>
+    <div class="item slides">
+      <div class="slide-3"></div>
+      <div class="hero">        
+        <hgroup>
+            <img src="https://media-cdn.tripadvisor.com/media/photo-o/03/d8/b0/ce/restaurante.jpg" style="height: 600px; width: 100%" alt="">
+        </hgroup>
+      </div>
+    </div>
+  </div> 
+</div><br><br><br><br><br>
         <div class="main main-raised">
             <div class="container">
                 <div class="section text-center section-landing">
                     <div class="row">
                         <div class="col-md-12 ">
                             <h2 class="title">Bienvenidos tu cafeteria CTPI.</h2>
-                            <h5 class="description">Bienvenidos tu cafeteria CTPI.</h5>
                         </div>
                     </div>  
                     <div class="features">
@@ -151,61 +167,42 @@
                         </div>
                     </div>
                 </div>
-                <div class="container seccion" id="registrar">
-                <div class="row">
-                    <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
-                        <div class="card card-signup">
-                            <form class="form" method="" action="">
-                                <div class="header header-warning text-center">
-                                    <h4>Registrate con tu Gmail</h4>
-                                    <div class="social-line">
-                                        <a href="#pablo" class="btn btn-simple btn-just-icon">
-                                            <i class="fa fa-google-plus"></i>
-                                        </a>
-                                    </div>
+                <center><h2>MENU</h2></center>
+                <ul class="breadcrumb" style="margin-bottom: 5px;">
+                  <li><a href="javascript:void(0)">DESAYUNO</a></li>
+                  <li><a href="javascript:void(0)">ALUMUERZO</a></li>
+                  <li><a href="javascript:void(0)">CENA</a></li>
+                </ul><br> <br><br>
+                <div class="container">
+                    <?php 
+                       foreach ($datos as $dato){
+                     ?>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card">
+                                <!--Card image-->
+                                <img style="width: 100%;" class="img-fluid" src="<?php echo base_url()?>public/uploads/productos/<?php echo $dato->ProdImagen;?>">
+                                <!--Card content-->
+                                <div class="card-body">
+                                    <!--Title-->
+                                    <h4 class="card-title"><?php echo $dato->ProdNombre ?></h4>
+                                    <!--Text-->
+                                    <p class="card-text"><?php echo $dato->ProdDescripcion ?></p>
+                                    <a href="#" class="btn" >agregar</a>
                                 </div>
-                                <p class="text-divider">Bienvenido</p>
-                                <div class="content">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="material-icons">face</i>
-                                        </span>
-                                        <div class="form-group has-error">
-                                            <input type="email" class="form-control" placeholder="correo">
-                                        </div>  
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="material-icons">lock_outline</i>
-                                        </span>
-                                        <div class="form-group has-error">
-                                            <input type="password" placeholder="Contraseña" class="form-control" />
-                                        </div>  
-                                    </div>
-
-                                    <!-- If you want to add a checkbox to this form, uncomment this code
--->
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" name="optionsCheckboxes" >
-                                        </label>
-                                            ¿Acepta los teminos y las condiciones?
-                                    </div> 
-                                </div>
-                                <div class="footer text-center">
-                                    <a href="inicioadmin.php" class="btn btn-simple btn-danger btn-lg">Ingresar</a>
-                                </div>
-                            </form>
+                            </div>
                         </div>
+                <?php 
+                } ?>
                     </div>
-                </div>
+
                 <div class="section text-center">
                     <h2 class="title">EQUIPO</h2>
                     <div class="team">
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="team-player">
-                                    <img src="<?php echo base_url();?>public/img/juliana.jpg" alt="Thumbnail Image" class="img-raised img-circle">
+                                    <img src="<?php echo base_url() ?>public/img/juliana.jpg" alt="Thumbnail Image" class="img-raised img-circle">
                                     <h4 class="title">Juliana Gaviria<br />
                                         <small class="text-muted">Analisis y Desarrollo de Sistemas de Informacion</small>
                                     </h4>
@@ -219,7 +216,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="team-player">
-                                                <img src="<?php echo base_url();?>public/img/dyego.jpg" alt="Thumbnail Image" class="img-raised img-circle">
+                                                <img src="<?php echo base_url() ?>public/img/dyego.jpg" alt="Thumbnail Image" class="img-raised img-circle">
                                     <h4 class="title">Dyego Vallejo<br />
                                         <small class="text-muted">Analisis y Desarrollo de Sistemas de Informacion</small>
                                     </h4>
@@ -233,7 +230,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="team-player">
-                                                <img src="<?php echo base_url();?>public/img/brayan.jpg" alt="Thumbnail Image" class="img-raised img-circle">
+                                                <img src="<?php echo base_url() ?>public/img/brayan.jpg" alt="Thumbnail Image" class="img-raised img-circle">
                                     <h4 class="title">Brayan Tenorio<br />
                                         <small class="text-muted">Analisis y Desarrollo de Sistemas de Informacion</small>
                                     </h4>
@@ -282,7 +279,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-4 col-md-offset-4 text-center">
-                                            <button class="btn btn-danger btn-raised">
+                                            <button class="btn btn btn-raised" >
                                             Enviar Mensaje
                                             </button>
                                         </div>
@@ -328,18 +325,20 @@
                 </div>
             </footer>
        
-        
+    </div>
+    <!--   JS    -->
+    <script src="<?php echo base_url() ?>public/js/jquery.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url() ?>public/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url() ?>public/js/material.min.js"></script>
+    <script src="<?php echo base_url() ?>public/js/nouislider.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url() ?>public/js/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script src="<?php echo base_url() ?>public/js/material-kit.js" type="text/javascript"></script>
+    <!--MATERIALIZE-->
+    <script src="<?php echo base_url() ?>public/js/materialize.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url() ?>public/js/misestilos.js" type="text/javascript"></script>
+    <script src="<?php echo base_url() ?>public/js/material.js" type="text/javascript"></script>
 </body>
 
-    <!--   JS    -->
-    <script src="<?php echo base_url();?>public/js/jquery.min.js" type="text/javascript"></script>
-    <script src="<?php echo base_url();?>public/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="<?php echo base_url();?>public/js/material.min.js"></script>
-    <script src="<?php echo base_url();?>public/js/nouislider.min.js" type="text/javascript"></script>
-    <script src="<?php echo base_url();?>public/js/bootstrap-datepicker.js" type="text/javascript"></script>
-    <script src="<?php echo base_url();?>public/js/material-kit.js" type="text/javascript"></script>
-    <!--MATERIALIZE-->
-    <script src="<?php echo base_url();?>public/js/materialize.min.js" type="text/javascript"></script>
-    <script src="<?php echo base_url();?>public/js/misestilos.js" type="text/javascript"></script>
 
 </html>
+inicio.php

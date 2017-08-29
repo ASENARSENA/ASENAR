@@ -24,30 +24,30 @@
                   <div  class="row">
                       <div class="col-lg-12">
                           <div class="card">
-                              <div class="card-header" data-background-color="green">
+                              <div class="card-header" style="background: #dd2c00">
                                   <center><h2 class="title">Editar Producto</h2><center>
                               </div>
                               <div class="card-content">
       <p>
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" value="<?= set_value_input($datos,'nombre',$datos->ProdNombre); ?>" class="form-control" autofocus="True" />
+        <!-- <label for="nombre">Nombre:</label> -->
+        <input style="width: 800px; margin: 0 auto" type="text" name="nombre" value="<?= set_value_input($datos,'nombre',$datos->ProdNombre); ?>" class="form-control" autofocus="True" />
       </p>
       <p>
-        <label for="imagen">Imagen:</label>
-        <input type="file" name="imagen" value="" />
+        <!-- <label for="imagen">Imagen:</label> -->
+        <input style="width: 800px; margin: 0 auto" type="file" name="imagen" value="" />
       </p>
       <p>
-        <label for="categoria">Categoria:</label>
-        <input type="text" name="categoria" value="<?= set_value_input( 
+        <!-- <label for="categoria">Categoria:</label> -->
+        <input style="width: 800px; margin: 0 auto" type="text" name="categoria" value="<?= set_value_input( 
         $datos,'categoria',$datos->ProdCategoria); ?>" class="form-control"/>
       </p>
       <p>
-        <label for="descripcion">Descripcion:</label>
-        <input type="text" name="descripcion" value="<?= set_value_input($datos,'descripcion',$datos->ProdDescripcion); ?>" class="form-control" />
+        <!-- <label for="descripcion">Descripcion:</lab -->
+        <input style="width: 800px; margin: 0 auto" type="text" name="descripcion" value="<?= set_value_input($datos,'descripcion',$datos->ProdDescripcion); ?>" class="form-control" />
       </p>
       <hr />
       <input type="hidden" name="id" value="<?= $id?>"/>
-      <button class="btn btn-danger" type="submit">Enviar</button>
+      <center>  <button class="btn" style="background: #ff9800" type="submit">Enviar</button></center>
     <?= form_close();?>
     </div>
   </div>

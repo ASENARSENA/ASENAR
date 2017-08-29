@@ -27,15 +27,14 @@ class AddCategorias extends CI_Controller {
 
   public function add(){
 
-   // $categorias=$this->addcategorias_model->getCategorias();
+   //$categorias=$this->addcategorias_model->getCategorias();
     if ($this->input->post()) {
                
             if ($this->form_validation->run('add_categoria')) {
                    
-                 $data= array(
-                  'CatNombre'=>$this->input->post('categoria',true),
-                 );  
-                 $insertar=$this->addcategorias_model->insertarcategoria($data);
+                $data= array('CatNombre'=>$this->input->post('categorias',true),
+                );  
+                $insertar=$this->addcategorias_model->insertar($data);
                  $this->session->set_flashdata('css','success');
                  $this->session->set_flashdata('mensaje','La categoria se ha creado exitosamente');
                  redirect(base_url()."productos");

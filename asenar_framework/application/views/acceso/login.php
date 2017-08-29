@@ -27,8 +27,8 @@
 							                    <?php
 							                }
 							                ?>
-								<div class="header header-warning text-center">
-									<h4>Ingresar</h4>
+								<div class="header text-center" style="background: #F9a825;">
+									<h4 >Ingresar</h4>
 									<div class="social-line">
 										<a href="<?php echo base_url();?>" class="btn btn-simple btn-just-icon">
 											<i class="fa fa-facebook-square"></i>
@@ -73,7 +73,7 @@
 									</div> 
 								</div>
 								<div class="footer text-center">
-								<button class="btn btn-simple btn-default btn-lg" type="submit">Ingresar
+								<button style="background: #870000;" class="btn " type="submit">Ingresar
 								    <i class="material-icons right">send</i>
 								</button>
 									

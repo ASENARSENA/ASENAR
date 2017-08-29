@@ -18,10 +18,9 @@ class Addcategorias_model extends CI_Model
 
     }
 
-    public function insertarcategoria($data=array()){
-
+    public function insertar($data=array())
+    {
         $this->db->insert('categorias',$data);
-
         return $this->db->insert_id();
     }
 }

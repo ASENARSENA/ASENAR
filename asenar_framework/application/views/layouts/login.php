@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
 	<!-- CSS Files -->
+	<link href="<?php echo base_url() ?>public/css/login.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>public/css/bootstrap.min.css" rel="stylesheet" />
     <link href="<?php echo base_url();?>public/css/material-kit.css" rel="stylesheet"/>
 

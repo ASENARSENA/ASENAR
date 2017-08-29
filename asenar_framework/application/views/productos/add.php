@@ -24,7 +24,7 @@
                     <div  class="row">
                         <div class="col-lg-12">
                             <div class="card">
-                                <div class="card-header" data-background-color="green">
+                                <div class="card-header" style="background: #dd2c00">
                                     <center><h2 class="title">Agregar Producto</h2><center>
                                 </div>
                                 <div class="card-content">
@@ -60,7 +60,7 @@
             </div>
             <hr />
             <!--<input type="hidden" name="id" value="<?= $id ?>">-->
-            <center><button class="btn btn-success" type="submit">Guardar</button></center>
+            <center><button class="btn" style="background: #ff9800" type="submit">Guardar</button></center>
         <?= form_close();?>
         </div>
     </div></div></div></div></div></div></div>

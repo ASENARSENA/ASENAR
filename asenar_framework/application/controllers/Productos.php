@@ -31,27 +31,27 @@ class Productos extends CI_Controller {
         if($this->input->post())
            
         {
-             //print_r($_POST);
-             //$nombre_img = $_FILES['imagen']['name'];
-             //echo "$nombre_img";exit();
-            //primero subimos el archivo
-             $config['upload_path'] = './public/uploads/productos';
-             $config['allowed_types'] = 'gif|jpg|png|jpeg';
-             //$config['max_size']   = '100';
-             //$config['max_width'] = '1024';
-             //$config['max_height'] = '768';
-             $config['encrypt_name'] = true;
-             $this->load->library('upload', $config);
-             if ( ! $this->upload->do_upload('imagen'))
-                 {
-                 $error = array('error' => $this->upload->display_errors());
-                   
-                 }
-            
-            // //obtenemos el nombre del archivo
-             $ima = $this->upload->data();
-             $file_name = $ima['file_name'];
-            //generamos el insert en la tabla respectiva
+                 //print_r($_POST);
+                 //$nombre_img = $_FILES['imagen']['name'];
+                 //echo "$nombre_img";exit();
+                //primero subimos el archivo
+                 $config['upload_path'] = './public/uploads/productos';
+                 $config['allowed_types'] = 'gif|jpg|png|jpeg';
+                 //$config['max_size']   = '100';
+                 //$config['max_width'] = '1024';
+                 //$config['max_height'] = '768';
+                 $config['encrypt_name'] = true;
+                 $this->load->library('upload', $config);
+                 if ( ! $this->upload->do_upload('imagen'))
+                     {
+                     $error = array('error' => $this->upload->display_errors());
+                       
+                     }
+                
+                // //obtenemos el nombre del archivo
+                 $ima = $this->upload->data();
+                 $file_name = $ima['file_name'];
+                //generamos el insert en la tabla respectiva
             if($this->form_validation->run('add_productos'))
             {
             	$data= array(
