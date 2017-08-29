@@ -28,7 +28,8 @@
    
 </head>
 <body class="landing-page" data-spy="scroll" data-target="#registrar">
-    <nav class="navbar navbar-transparent navbar-absolute">
+    <nav class="navbar navbar-transparent navbar-fixed-top" role="navigation" style="::-webkit-scrollbar-track 
+      background-color: blue; ">
         <div class="container">
             <div class="navbar-header">  
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
@@ -105,7 +106,7 @@ box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);">
       <div class="slide-1"></div>
       <div class="hero">
         <hgroup>
-            <img src="https://media-cdn.tripadvisor.com/media/photo-o/03/d8/b0/ce/restaurante.jpg" style="height: 600px; width: 100%" alt="">
+            <img src="<?php echo base_url() ?>public/img/foto6.jpg" style="height: 600px; width: 100%" alt="">
         </hgroup>
       </div>
     </div>
@@ -113,7 +114,7 @@ box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);">
       <div class="slide-2"></div>
       <div class="hero">        
         <hgroup>
-            <img src="https://media-cdn.tripadvisor.com/media/photo-o/03/d8/b0/ce/restaurante.jpg" style="height: 600px; width: 100%" alt="">
+            <img src="<?php echo base_url() ?>public/img/foto2.jpg" style="height: 600px; width: 100%" alt="">
         </hgroup>       
          </div>
     </div>
@@ -121,7 +122,7 @@ box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);">
       <div class="slide-3"></div>
       <div class="hero">        
         <hgroup>
-            <img src="https://media-cdn.tripadvisor.com/media/photo-o/03/d8/b0/ce/restaurante.jpg" style="height: 600px; width: 100%" alt="">
+            <img src="<?php echo base_url() ?>public/img/foto3.jpg" style="height: 600px; width: 100%" alt="">
         </hgroup>
       </div>
     </div>
