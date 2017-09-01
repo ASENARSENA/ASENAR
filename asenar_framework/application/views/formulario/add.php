@@ -21,24 +21,23 @@
                 
                 <h1>Ingresa tus datos</h1>
                 <p>
-                    <label for="nombre">Nombre:</label>
+                    <label for="nombre">nombre</label>
                     <input type="text" name="nombre" class="form-control" value="<?php echo set_value_input(array(),'nombre','nombre')?>" />
                 </p>
                 <p>
-                    <label for="correo">E-Mail:</label>
-                    <input type="text" name="correo" class="form-control" value="<?php echo set_value_input(array(),'correo','correo')?>" />
-                </p>
-                
-                <p>
-                    <label for="correo">RUT:</label>
+                    <label for="rut">rut</label>
                     <input type="text" name="rut" class="form-control" value="<?php echo set_value_input(array(),'rut','rut')?>" />
                 </p>
-                
                 <p>
-                    <label for="nombre">Teléfono:</label>
+                    <label for="telefono">telefono</label>
                     <input type="text" name="telefono" class="form-control" value="<?php echo set_value_input(array(),'telefono','telefono')?>" />
                 </p>
+                <p>
+                    <label for="correo">correo</label>
+                    <input type="text" name="correo" class="form-control" value="<?php echo set_value_input(array(),'correo','correo')?>" />
+                </p>
                 <hr />
+                <!-- <input type="hidden" name="id" value="<?= $id ?>"> -->   
                 <input type="submit" value="Enviar" class="btn btn-default" />
             <?php echo form_close();?>
         </div>

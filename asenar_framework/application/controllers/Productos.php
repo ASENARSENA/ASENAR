@@ -52,7 +52,7 @@ class Productos extends CI_Controller {
                  $ima = $this->upload->data();
                  $file_name = $ima['file_name'];
                 //generamos el insert en la tabla respectiva
-            if($this->form_validation->run('add_productos'))
+            if($this->form_validation->run('add_formulario'))
             {
             	$data= array(
                 'ProdNombre'=>$this->input->post("nombre",true),
@@ -72,39 +72,56 @@ class Productos extends CI_Controller {
 		$this->layout->view('add', compact('categorias'));
 	}
 
-	public function edit($id=null)
-    {
-        if(!$id){show_404();}
+	public function edit($id=null){
+
+        if (!$id) {         
+            show_404();
+        }
+        //CARGAMOS EL MODELO
         $datos=$this->productos_model->getTodosPorId($id);
-        if(sizeof($datos)==0){show_404();}
-        if($this->input->post())
-        {
-            if($this->form_validation->run('add_productos'))
-            {
-                $data=array
-                (
+        
+        /******NO FUNCIA
+        if (sizeof($datos==0)) {
+            show_404();
+        }*/
+        
+        if ($this->input->post()) {
+            
+            if ($this->form_validation->run('add_formulario')) {
+                
+                //REGLA DE VALIDACION
+                $data=array(
+                        //PASAMOS PALAMETROS
                     'ProdNombre'=>$this->input->post('nombre',true),
-                    'ProdImagen'=>$this->input->post('imagen',true),
                     'ProdCategoria'=>$this->input->post('categoria',true),
                     'ProdDescripcion'=>$this->input->post('descripcion',true),
-                );
+                    );
+                //LLAMAMOS LA FUNCION DEL MODELO PARA EDITAR
                 $this->productos_model->update($data,$this->input->post('id',true));
                 $this->session->set_flashdata('css','success');
-                $this->session->set_flashdata('mensaje','El registro se ha modificado exitosamente');
-                redirect(base_url()."productos");
+                $this->session->set_flashdata('mensaje','El registro se ha modificado  correctamente :D');
+                //LO REDIRECIONAMOS
+                redirect(base_url()."productos"); 
             }
-        } 
+        }
+        
         $this->layout->view('edit',compact('datos','id'));
+
     }
 
-    public function delete($id=null)
-    {
-        if(!$id){show_404();}
+    public function delete($id=null){
+        
+        if (!$id) {
+            show_404();
+        }
         $datos=$this->productos_model->getTodosPorId($id);
-        if(sizeof($datos)==0){show_404();}
+            /******NO FUNCIA
+            if (sizeof($datos==0)) {
+                show_404();
+            }*/
         $this->productos_model->delete($id);
-        $this->session->set_flashdata('css','success');
-        $this->session->set_flashdata('mensaje','El registro se ha eliminado exitosamente');
+        $this->session->set_flashdata('css','danger');
+        $this->session->set_flashdata('mensaje','El registro se ha elimino satisfactoriamente :D');
         redirect(base_url()."productos");
     }
 }

@@ -23,11 +23,11 @@
                 <div class="container-fluid">
                     <div  class="row">
                         <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-header" style="background: #dd2c00">
-                                    <center><h2 class="title">Agregar Producto</h2><center>
-                                </div>
-                                <div class="card-content">
+                        <div class="card">
+                            <div class="card-header" style="background: rgb(240, 177, 96)">
+                                <center><h2 class="title">Agregar Producto</h2><center>
+                            </div>
+            <div class="card-content">
             <div>
                 <label style=" margin-left:80px;" for="nombre">Nombre:</label>
                 <input style="width: 80%; margin: 0 auto;" type="text" name="nombre" value="<?php set_value_input(array(),'nombre','nombre'); ?>" class="form-control" autofocus="True" />

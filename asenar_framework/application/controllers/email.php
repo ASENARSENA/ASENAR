@@ -1,44 +1,17 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Formulario extends CI_Controller {
-
-	//http://localhost/asenar_framework/principal
+class Email extends CI_Controller {
 
 	public function __construct()
     {
         parent::__construct();
-        $this->layout->setLayout("template");
+        $this->layout->setLayout("frontend");
     }
-    
-	//localhost/home/nosotros
-    
-	public function add()
+
+	public function index()
 	{
-		//zona de procesamiento del formulario
-        $datos=$this->formulario_model->getprueba();
-        if($this->input->post())
-        {
-            if($this->form_validation->run('add_formulario_prueba'))
-            {
-                $data= array(
-
-                'nombre'=>$this->input->post("nombre",true),
-                'correo'=>$this->input->post("correo",true),
-                'rut'=>$this->input->post("rut",true),
-                'telefono'=>$this->input->post("telefono",true),
-                
-                );
-                $insertar=$this->formulario_model->insertar($data);
-                redirect(base_url()."correo");
-            }
-        }
-		$this->layout->view("add", compact('enviarcorreo'));
-	}
-    
-    public function enviarcorreo(){
-
-        $this->load->library('email');
+		$this->load->library('email');
         //de donde mandamos el correo
         $correoGmail=array(
             'protocolo'=>'smtp',
@@ -70,6 +43,6 @@ class Formulario extends CI_Controller {
         }else{
             echo $this->email->print_debugger();
         }
-        
-    }
+		
+	}
 }

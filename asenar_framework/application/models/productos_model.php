@@ -10,7 +10,7 @@
 
  	// metodos de consulta  a la base de datos
 
-    public function getproductos(){
+    public function getProductos(){
     	$sql=$this->db
     	->select("idProductos,ProdNombre,ProdImagen,CatNombre,ProdDescripcion")
     	->from("Productos")
@@ -42,7 +42,7 @@
      public function getTodosPorId($id)
     {
         $query=$this->db
-                ->select("idProductos,ProdNombre,ProdImagen,ProdCategoria,ProdDescripcion")
+                ->select("*")
                 ->from("productos")
                 ->where(array("idProductos"=>$id))
                 ->get();
@@ -62,9 +62,11 @@
         $this->db->update('productos',$data);
     }
 
-    public function delete($id)
-    {
+   public function delete($id){
+        
         $this->db->where('idProductos',$id);
+                       //LA TABLA Y EL DATO POR ARREGLO
+                        //EN ESTE NO NECESITAMOS EL DATO
         $this->db->delete('productos');
     }
 

@@ -16,4 +16,13 @@
     	->get();
     	return $sql->result();
     }
+      public function getUsuarios(){
+
+        $sql=$this->db
+                  ->select('*')
+                  ->from('personas')
+                  ->get();
+        return $sql->result();
+     }
+    
 }

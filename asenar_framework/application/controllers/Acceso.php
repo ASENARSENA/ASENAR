@@ -28,7 +28,7 @@ class Acceso extends CI_Controller {
             {
                 //crear y referenciar un método para preguntar si los datos
                 //ingresados por el usuario existen en la bd
-                $datos=$this->usuarios_model->getLogin($this->input->post('correo',true),($this->input->post('pass',true)));
+                $datos=$this->personas_model->getLogin($this->input->post('correo',true),($this->input->post('pass',true)));
                 //crear una condición para validar lo anterior
                 if(sizeof($datos)==0)
                 {

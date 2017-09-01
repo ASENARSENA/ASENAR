@@ -7,7 +7,7 @@ $config = array(
         /**
          * add_formulario
          * */
-        'add_productos'
+        'add_formulario'
         => array(
             
             array('field' => 'nombre','label' => 'Nombre','rules' => 'required|is_string|trim|max_length[50]'),
@@ -21,11 +21,13 @@ $config = array(
         /**
          * elefante
          * */
-        'elefante'
+        'add_formulario_prueba'
         => array(
             
-            array('field' => 'nombre','label' => 'Nombre','rules' => 'required|is_string|trim|max_length[5]'),
-            array('field' => 'correo','label' => 'E-Mail','rules' => 'required|is_string|trim|valid_email'),
+            array('field' => 'nombre','label' => 'nombre','rules' => 'required|is_string|trim|max_length[10]'),
+            array('field' => 'correo','label' => 'correo','rules' => 'required|is_string|trim|valid_email'),
+            array('field' => 'rut','label' => 'rut','rules' => 'required|trim'),
+            array('field' => 'telefono','label' => 'telefono','rules' => 'required|trim'),
             
         ), 
         
@@ -44,7 +46,7 @@ $config = array(
         'add_categoria'
         => array(
         
-            array('field'=>'categoria','rueles'=>'required|is_string|trim'),
+            array('field'=>'categorias','rules'=>'required|is_string|trim'),
         ),
    //éste es el final      
 );

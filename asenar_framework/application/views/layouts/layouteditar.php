@@ -1,10 +1,10 @@
 		<!doctype html>
 		<html lang="en">
 		<head>
-			
+			 
 			<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 			<link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url();?>public/img/apple-icon.png" />
-			<link rel="icon" type="image/png" href="<?php echo base_url();?>public/img/iconm.png" />
+			<link rel="icon" type="image/png" href="<?php echo base_url();?>public/img/favicon.png" />
 			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 			<title>ASENAR</title>
@@ -19,8 +19,8 @@
 		    <link href="<?php echo base_url();?>public/css/material-dashboard.css" rel="stylesheet"/>
 		    <link href="<?php echo base_url();?>public/css/material-dashboard.css" rel="stylesheet"/>
 		    <!--  CSS for Demo Purpose, don't include it in your project     -->
-		    <!-- <link href="<?php echo base_url();?>public/css/demo.css" rel="stylesheet" />
-			 -->
+		    <link href="<?php echo base_url();?>public/css/demo.css" rel="stylesheet" />
+			
 		    <!--     Fonts and icons     -->
 		    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
 		    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
@@ -34,35 +34,31 @@
 				        Tip 2: you can also add an image using data-image tag
 				    -->
 
-					<div class="logo" style="background: #fff; height: 80px;"  >
+					<div class="logo" style="background: #f4551e"; >
 						<a href="#!" class="simple-text">
-							<img style="margin-top: -80px;" src="<?= base_url() ?>public/img/logo2.png" alt="">
+							<h4 style="color: #fff">ASENAR</h4>
 						</a>
+						
+					
 					</div>
-			    	<div class="sidebar-wrapper" style="background: #9c0c0c;">
+			    	<div class="sidebar-wrapper" style="background: #ff6e40;">
 			            <ul class="nav">
 			                <li>
-			                    <a href="#">
+			                    <a href="<?= base_url() ?>personas ">
 			                        <i style="color: #fff" class="material-icons">store</i>
 	                        <p style="color: #fff">Inicio</p>
 	                    </a>
 	                </li>
 	                 <li>
 	                     <li role="presentation" class="dropdown ">	             
-	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">	      
+	                    <a href="<?= base_url()?>personas/editarperfil">	      
 	                    	<i style="color: #fff" class="material-icons">person</i>
-	                        <p style="color: #fff">Gestioinar Productos</p>
-	                    </a>
-	                    	<ul class="dropdown-menu">
-	                        	<li role="presentation"><a href="<?php echo base_url()?>productos">Ver Productos</a></li>
-	                        	</a> </li>	
-	                        	<li  role="presentation"><a href="<?php echo base_url()?>productos/add">Agregar Productos</a></li>
-	                        </ul>
+	                        <p style="color: #fff">Editar Perfil</p>
 	                    </a>
 	                </li>
-	                 	<a  href="<?php echo base_url()?>categorias">	      
-	                    	<i style="margin-left: 30px; color: #fff"  class="material-icons">more</i>
-	                        <p style="color: #fff">Gestioinar Categorias </p>
+	                 	<a  href="<?php echo base_url()?>addCategorias">	      
+	                    	<i style="margin-left: 30px; color: #fff"  class="material-icons">close</i>
+	                        <p style="color: #fff">Cerrar Sesion</p>
 	                    </a>
 	                
 	            </ul>
@@ -70,7 +66,7 @@
 	    </div>
 
 	    <div class="main-panel">
-			<nav class="navbar navbar-absolute" style="background:rgba(218, 86, 8, 0.52); height: 80px;">
+			<nav class="navbar navbar-absolute" style="background: 	 rgba(218, 86, 8, 0.52);">
 				<div class="container-fluid">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse">

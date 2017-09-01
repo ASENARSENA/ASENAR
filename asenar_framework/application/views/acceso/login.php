@@ -27,7 +27,7 @@
 							                    <?php
 							                }
 							                ?>
-								<div class="header text-center" style="background: #F9a825;">
+								<div class="header text-center" style="background: #e78200;">
 									<h4 >Ingresar</h4>
 									<div class="social-line">
 										<a href="<?php echo base_url();?>" class="btn btn-simple btn-just-icon">
