@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url() ?>public/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="<?php echo base_url() ?>public/img/iconm.png">
+    <link rel="icon" type="image/png" href="<?php echo base_url();?>public/img/iconm.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title>Restaurant</title>
+    <title>ASENAR</title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -28,8 +28,7 @@
    
 </head>
 <body class="landing-page" data-spy="scroll" data-target="#registrar">
-    <nav class="navbar navbar-transparent navbar-fixed-top" role="navigation" style="::-webkit-scrollbar-track 
-      background-color: blue; ">
+    <nav class="navbar orange navbar-fixed-top" role="navigation" style="background: #ae3a3a">
         <div class="container">
             <div class="navbar-header">  
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
@@ -50,7 +49,7 @@
                         </a>
                     </li>          
                     <li>
-                        <a href="#registrar">
+                        <a href="<?=base_url()?>registro_personas">
                             <i class="material-icons">border_color</i>Registrate
                         </a>
                     </li>
@@ -170,10 +169,10 @@ box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);">
                   <li><a href="javascript:void(0)">ALUMUERZO</a></li>
                   <li><a href="javascript:void(0)">CENA</a></li>
                 </ul><br> <br><br>
-                <div class="container">
                     <?php 
                        foreach ($datos as $dato){
                      ?>
+                <div class="container">
                     <div class="row">
                         <div class="col-md-4 col-sm-6">
                             <div class="card">

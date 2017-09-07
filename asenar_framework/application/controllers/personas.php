@@ -8,26 +8,28 @@ class Personas extends CI_Controller {
 		$this->layout->setLayout("layoutinciocliente");	
 	}
 
-	// public function index(){
+	 /* public function index(){
 
-	//        if($this->session->userdata('id')){
+	         if($this->session->userdata('id')){
 
-	//            //$this->layout->view("productos");
-	//               $datos=$this->usuarios_model->getUsuarios();
-	// 			$this->layout->view('index', compact('datos'));
-	//        }else
-	//        {
-	// 	  redirect(base_url()."acceso/login");
-	//       	}		
-	// }
-	 public function index(){
+	             $this->layout->view("productos");
+	                $datos=$this->usuarios_model->getUsuarios();
+	  			$this->layout->view('index', compact('datos'));
+	         }else
+	         {
+	  	  redirect(base_url()."acceso/login");
+	        	}		
+	  }*/
+	  public function index(){
 
-	 	$datos=$this->inicio_model->getproductosusuario();
-	 	$this->layout->view('portal', compact('datos'));
-	 }
+	  	$datos=$this->inicio_model->getproductosusuario();
+	  	$this->layout->view('portal', compact('datos'));
+	  }
 
-	public function perfil()
-	{
+  
+
+	public function perfil(){
+    
 		$this->layout->setLayout("layoutCliente");
 		$datos=$this->personas_model->getUsuarios();
 		$this->layout->view('perfil',compact('datos'));
@@ -40,59 +42,66 @@ class Personas extends CI_Controller {
   //           show_404();
   //       }
   //       //CARGAMOS EL MODELO
-  		  $datos=$this->personas_model->getUsuariosPorId($id);
-  //       if ($this->input->post()) {
-               ********BORRAR******
-              //ACA VA LA VALIDACION DE BRAYAN Y DAVID POR ESO NO CARGA LA VISTA DE EDITAR CORRECTAMENTE
-  //           if ($this->form_validation->run('add_usuarios')) {
-                   
-  //               $data= array(
-  //                 'CatNombre'=>$this->input->post('categorias',true),
-  //                 ); 
-  //               $this->usuarios_model->update($data,$this->input->post('id',true));
-  //               $this->session->set_flashdata('css','success');
-  //               $this->session->set_flashdata('mensaje','La categoria se ha Editado exitosamente');
-  //                redirect(base_url()."perfil");
-  //           }
+  		//$datos=$this->personas_model->getUsuariosPorId($id);
+      //    if ($this->input->post()) {
+              
+      //        if ($this->form_validation->run('add_personas')) {
+      //           $data=array
+      //           (
+      //               'PerNombres'=>$this->input->post('nombre',true),
+      //               'PerApellidos'=>$this->input->post('apellido',true),
+      //               'PerIdentificacion'=>$this->input->post('identificacion',true),
+      //               'PerEmail'=>$this->input->post('correo',true),
+      //               'PerTelefono'=>$this->input->post('telefono',true),
+      //               'PerContrasena'=>$this->input->post('pass',true),
+      //               'PerTipoUsuario'=>$this->input->post('roll',true),
+                    
+      //           );
+      //         $this->productos_model->update($data,$this->input->post('id',true));
+      //         $this->session->set_flashdata('css','success');
+      //         $this->session->set_flashdata('mensaje','Su Perfil  se ha modificado  correctamente :D');
+      //           //LO REDIRECIONAMOS
+      //           redirect(base_url()."perfil"); 
 
        $this->layout->view('edit',compact('datos','id'));	
        }
-
+     
       //SOLO ENVIA CORREO SI TIENE HOSTING FALLA...GRAN PARTE TERMINADA
-	/* public function enviarcorreo(){
+	 /*public function enviarcorreo(){
 
-        $this->load->library('email');
-        //de donde mandamos el correo
-        $correoGmail=array(
-            'protocolo'=>'smtp',
-            'smtp_host'=>'ssl://smtp.gmail.com',
-            'smtp_port'=>25,
-            'smtp_user'=>'correo_gmail',
-            'smtp_pass'=>'password',
-            'charset'=>'utf-8',
-            'newline'=>"\r\n"
-            );
-        //$config['mailtype']='html';
-        $this->email->initialize($correoGmail);
-        $this->email->from("jelopez642@misena.edu.co",'Estiven Lopez');
-        //correo a enviar
-        $this->email->to('dyegovallejob@gmial.com');
-        //$this->email->cc('djvallejo8@misena.edu.co');
-        //ASUSNTO
-        $this->email->subject('Registro ASENAR');
-        //MENSAJE
-        $this->email->message('<p>Cuenta Registrada Satisfactoriamente</p>');
-        $this->email->send();
-        var_dump($this->email->print_debugger());
+         $this->load->library('email');
+         //de donde mandamos el correo
+         $correoGmail=array(
+             'protocolo'=>'smtp',
+             'smtp_host'=>'ssl://smtp.gmail.com',
+             'smtp_port'=>25,
+             'smtp_user'=>'correo_gmail',
+             'smtp_pass'=>'password',
+             'charset'=>'utf-8',
+             'newline'=>"\r\n"
+             );
+         $config['mailtype']='html';
+         $this->email->initialize($correoGmail);
+         $this->email->from("jelopez642@misena.edu.co",'Estiven Lopez');
+         //correo a enviar
+         $this->email->to('dyegovallejob@gmial.com');
+         $this->email->cc('djvallejo8@misena.edu.co');
+         //ASUSNTO
+         $this->email->subject('Registro ASENAR');
+         //MENSAJE
+         $this->email->message('<p>Cuenta Registrada Satisfactoriamente</p>');
+         $this->email->send();
+         var_dump($this->email->print_debugger());
 
-        //ENVIAR
-        if ($this->email->send()){
+         //ENVIAR
+         if ($this->email->send()){
            
-          $this->layout->view('index');
+           $this->layout->view('index');
 
-        }else{
-            echo $this->email->print_debugger();
-        }
+         }else{
+             echo $this->email->print_debugger();
+         }
         
-    }*/
+     }*/
 }
+

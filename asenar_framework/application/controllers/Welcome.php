@@ -22,4 +22,29 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
+	public function getProductos(){
+
+		$this->load->model('webservice_model');
+		$data=$this->webservice_model->getProductos();
+		//CABEZERA DE JSON
+		header('Content-Type: application/json');
+		echo json_encode($data);
+	}
+	public function getLogin(){
+
+		$this->load->model('webservice_model');
+		$data=$this->webservice_model->getLogin();
+		//CABEZERA DE JSON
+		header('Content-Type: application/json');
+		echo json_encode($data);
+	}
+
+	// public function getLogin(){
+
+	// 	$this->layout->model('webservice_model');
+	// 	$data=$this->webservice_model->getLogin();
+	// 	//CABEZERA DE JSON
+	// 	header('Content-Type: application/json');
+	// 	echo json_encode($data);
+	// }
 }

@@ -60,11 +60,18 @@
 	                        </ul>
 	                    </a>
 	                </li>
+	               
 	                 	<a  href="<?php echo base_url()?>categorias">	      
 	                    	<i style="margin-left: 30px; color: #fff"  class="material-icons">more</i>
 	                        <p style="color: #fff">Gestioinar Categorias </p>
 	                    </a>
 	                
+	                 <li role="presentation" class="dropdown">
+	                    <a href="<?php echo base_url();?>Menu/gestion">
+	                        <i class="material-icons">people</i>
+	                        <p>Gestionar Menú</p>
+	                    </a>
+	                </li>	        
 	            </ul>
 	    	</div>
 	    </div>
@@ -182,5 +189,6 @@
 
     	});
 	</script>
+	<script type="text/javascript" src="<?php echo base_url();?>public/js/ajax.js"></script>
 
 </html>

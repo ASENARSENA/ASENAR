@@ -1,4 +1,4 @@
-<nav class="navbar navbar-transparent navbar-fixed-top" role="navigation" style="::-webkit-scrollbar-track 
+<!-- <nav class="navbar navbar-transparent navbar-fixed-top" role="navigation" style="::-webkit-scrollbar-track 
       background-color: blue; ">
         <div class="container">
             <div class="navbar-header">  
@@ -29,7 +29,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="<?= base_url()?>acceso/login">
+                        <a href="<?= base_url()?>personas/registrarse">
                             <i class="material-icons">edit</i>Registrarse
                         </a>
                     </li>
@@ -56,7 +56,7 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> -->
      <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel" style="-webkit-box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);
 box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);">
@@ -119,7 +119,7 @@ box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);">
                      ?>
                     <div class="row">
                         <div class="col-md-4 col-sm-6">
-                            <div class="card" style="background: #F5C4C7">
+                            <div class="card" style="background: #F5C4C7; ">
                                 <!--Card image-->
                                 <img style="width: 100%;" class="img-fluid" src="<?php echo base_url()?>public/uploads/productos/<?php echo $dato->ProdImagen;?>">
                                 <!--Card content-->

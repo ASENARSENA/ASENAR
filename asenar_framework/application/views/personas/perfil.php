@@ -12,19 +12,19 @@
                                     {
                                 ?>
 	                            <div>
-					                <label style=" margin-left:80px;" for="nombre">Nombre:</label>
+					                
 					                <center><h3><?= $dato->PerNombres ?></h3></center>
 					            </div>
 					            <div>
-					                <label style=" margin-left:80px;" for="nombre">Nombre:</label>
+					                
 					                <center><h3><?= $dato->PerApellidos ?></h3></center>
 					            </div>
 					            <div>
-					                <label style=" margin-left:80px;" for="nombre">Nombre:</label>
+					                
 					                <center><h3><?= $dato->PerIdentificacion ?></h3></center>
 					            </div>
 					            <div>
-					                <label style=" margin-left:80px;" for="nombre">Nombre:</label>
+					                
 					                <center><h3><?= $dato->PerEmail ?></h3></center>
 					            </div>
 					            <?php 

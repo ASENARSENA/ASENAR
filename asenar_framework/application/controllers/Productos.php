@@ -27,7 +27,7 @@ class Productos extends CI_Controller {
 	{
 
 		//zona de procesamiento del formulario
-        $categorias=$this->productos_model->getCategoriasId();
+        $categorias=$this->productos_model->getCategoriasId($id);
         if($this->input->post())
            
         {
@@ -69,7 +69,7 @@ class Productos extends CI_Controller {
             }
         }
         //
-		$this->layout->view('add', compact('categorias'));
+		$this->layout->view('add', compact('categorias','id'));
 	}
 
 	public function edit($id=null){
@@ -77,13 +77,9 @@ class Productos extends CI_Controller {
         if (!$id) {         
             show_404();
         }
-        //CARGAMOS EL MODELO
+        //CARGAMOS EL MODELO+
+        $categorias=$this->productos_model->getCategoriasId($id);
         $datos=$this->productos_model->getTodosPorId($id);
-        
-        /******NO FUNCIA
-        if (sizeof($datos==0)) {
-            show_404();
-        }*/
         
         if ($this->input->post()) {
             
@@ -105,7 +101,7 @@ class Productos extends CI_Controller {
             }
         }
         
-        $this->layout->view('edit',compact('datos','id'));
+        $this->layout->view('edit',compact('datos','id','idc','categorias'));
 
     }
 

@@ -19,19 +19,23 @@ class Formulario extends CI_Controller {
         $datos=$this->formulario_model->getprueba();
         if($this->input->post())
         {
-            if($this->form_validation->run('add_formulario_prueba'))
-            {
                 $data= array(
 
                 'nombre'=>$this->input->post("nombre",true),
                 'correo'=>$this->input->post("correo",true),
                 'rut'=>$this->input->post("rut",true),
                 'telefono'=>$this->input->post("telefono",true),
+                'roll'=>$this->input->post("roll",true),
+                'tipo'=>$this->input->post("desayuno",true),
+                'tipo'=>$this->input->post("almuerzo",true),
+
+                //'roll'=>$this->input->post("roll",true),
                 
                 );
+                //print_r($data);exit();
                 $insertar=$this->formulario_model->insertar($data);
                 redirect(base_url()."correo");
-            }
+            
         }
 		$this->layout->view("add", compact('enviarcorreo'));
 	}

@@ -17,19 +17,32 @@ class Acceso extends CI_Controller {
 		//$this->load->view("layouts/login");
 	}
 
-	public function login()
-    {
+	public function login(){
+
         if($this->session->set_userdata('Admin')){
             redirect(base_url()."acceso/login");
         }
         if($this->input->post())
         {
+            
             if($this->form_validation->run('login'))
             {
+                $data= array(
+                    'correo'=>$this->input->post('correo',true),
+                    'pass'=>$this->input->post('pass',true),
+                    );
                 //crear y referenciar un método para preguntar si los datos
                 //ingresados por el usuario existen en la bd
                 $datos=$this->personas_model->getLogin($this->input->post('correo',true),($this->input->post('pass',true)));
                 //crear una condición para validar lo anterior
+
+                 // if ($datos->PerTipoUsuario==1) {
+                 //     redirect(base_url()."productos");
+                 // }
+                if($datos->PerTipoUsuario==2){
+                     redirect(base_url()."personas");
+                    }
+
                 if(sizeof($datos)==0)
                 {
                     $this->session->set_flashdata('css','danger');
@@ -49,19 +62,20 @@ class Acceso extends CI_Controller {
         }
         $this->layout->view('login');
     }
+
     public function restringido1()
     {
-        if($this->session->userdata('id'))
-        {
+        if($this->session->userdata('id')){
+
             //$this->layout->view("productos");
             redirect(base_url()."productos");
-        }else
-        {
+        }else{
+
             redirect(base_url()."acceso/login");
         }
     }
-    public function salir()
-        {
+    public function salir(){
+
             $this->session->sess_destroy("Admin");
             redirect(base_url().'acceso/login',  301);
         }

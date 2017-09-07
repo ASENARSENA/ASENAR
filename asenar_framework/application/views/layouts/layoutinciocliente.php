@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title>Restaurant</title>
+    <title>ASENAR</title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -28,8 +28,7 @@
    
 </head>
 <body class="landing-page" data-spy="scroll" data-target="#registrar">
-    <nav class="navbar navbar-transparent navbar-fixed-top" role="navigation" style="::-webkit-scrollbar-track 
-      background-color: blue; ">
+    <nav class="navbar  navbar-fixed-top" role="navigation" style="background: #ae3a3a"">
         <div class="container">
             <div class="navbar-header">  
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
@@ -38,14 +37,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">ASENAR</a>
+                <a style="margin-top: -80px;" class="navbar-brand" href="#"><img  src="<?= base_url() ?>public/img/logo2.png" alt=""></a>
             </div>
             <div class="collapse navbar-collapse" id="navigation-example">
-                        <form class="navbar-form navbar-left">
-                            <div class="form-primary">
-                               <input type="text" class="form-control col-md-8" placeholder="Buscar">
-                            </div>
-                        </form>
+                        
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="#" target="_blank">

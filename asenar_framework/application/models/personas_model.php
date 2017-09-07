@@ -12,11 +12,12 @@ class Personas_Model extends CI_Model
         $query=$this->db
                 ->select("*")
                 ->from("personas")
-                ->where(array('PerNombres'=>$correo,'PerContrasena'=>$pass))
+                ->where(array('PerEmail'=>$correo,'PerContrasena'=>$pass))
                 ->get();
         //echo $this->db->last_query();exit;        
         return $query->row();            
-    }
+    } 
+    
 
     //LISTAR USUARIOS
      public function getUsuarios(){
@@ -39,6 +40,11 @@ class Personas_Model extends CI_Model
         return $query->row();            
     }
     
+    public function insertar($data=array()){
+
+        $this->db->insert('personas',$data); 
+        return $this->db->insert_id();
+    }
 
     public function update($data=array(),$id){
 

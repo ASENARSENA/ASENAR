@@ -76,7 +76,7 @@
 								<button style="background: #870000;" class="btn " type="submit">Ingresar
 								    <i class="material-icons right">send</i>
 								</button>
-									
+								 <!-- <input type="hidden" value="<?= $rol ?>"> -->
 								</div>
 							<?php echo form_close();?>
 						</div>

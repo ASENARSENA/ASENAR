@@ -1,6 +1,8 @@
 <?php 
-
- class productos_model extends CI_Model
+ /**
+ * 
+ */
+ class menu_model extends CI_Model
  {
  	
  	public function __construct()
@@ -10,7 +12,8 @@
 
  	// metodos de consulta  a la base de datos
 
-    public function getProductos(){
+    public function getproductos()
+    {
     	$sql=$this->db
     	->select("idProductos,ProdNombre,ProdImagen,CatNombre,ProdDescripcion")
     	->from("Productos")
@@ -30,22 +33,20 @@
         }
     }
 
-    public function getCategoriasId($id){
-
-        $this->db->order_by('CatNombre','asc');
-        $categorias = $this->db->get('categorias');
-
-        if($categorias->num_rows() > 0)
-        {
-          return $categorias->result();
-        }
-          
+    public function getCategoriasId(){
+        $sql = $this->db
+        ->select('*')
+        ->from('categorias')
+        ->order_by('CatNombre','acs')
+        ->get();
+        return $sql->result();
     }
+
 
      public function getTodosPorId($id)
     {
         $query=$this->db
-                ->select("*")
+                ->select("idProductos,ProdNombre,ProdImagen,ProdCategoria,ProdDescripcion")
                 ->from("productos")
                 ->where(array("idProductos"=>$id))
                 ->get();
@@ -55,25 +56,36 @@
 
     public function insertar($data=array())
     {
-        $this->db->insert('productos',$data);
+        $this->db->insert('menu',$data);
         return $this->db->insert_id();
     }
 
-    public function update($data=array(),$id)
+    public function insertarProductos($data=array())
     {
-        $this->db->where('idProductos',$id);
-        $this->db->update('productos',$data);
+        $this->db->insert('menuproductos',$data);
     }
+ //    public function update($data=array(),$id)
+ //    {
+ //        $this->db->where('idProductos',$id);
+ //        $this->db->update('productos',$data);
+ //    }
 
-   public function delete($id){
-        
-        $this->db->where('idProductos',$id);
-                       //LA TABLA Y EL DATO POR ARREGLO
-                        //EN ESTE NO NECESITAMOS EL DATO
-        $this->db->delete('productos');
-    }
+ //    public function delete($id)
+ //    {
+ //        $this->db->where('idProductos',$id);
+ //        $this->db->delete('productos');
+ //    }
+
+ 	
+ // }
+
+    //  public function getMenuDia(){
+    //     $sql = $this->db
+    //     ->select('menu_horario','jornada')
+    //     ->from('menu')
+    //     ->get();
+    //     return $sql->result();
+    // }
+
 
  }
-
-
- ?>

@@ -37,7 +37,7 @@
                     <input type="text" name="correo" class="form-control" value="<?php echo set_value_input(array(),'correo','correo')?>" />
                 </p>
                 <hr />
-                <!-- <input type="hidden" name="id" value="<?= $id ?>"> -->   
+                 <input type="hidden" name="roll" value="CLIENTE">    
                 <input type="submit" value="Enviar" class="btn btn-default" />
             <?php echo form_close();?>
         </div>

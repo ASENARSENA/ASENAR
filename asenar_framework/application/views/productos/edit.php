@@ -37,12 +37,23 @@
       <input style="width: 800px; margin: 0 auto" type="file" name="imagen" value="" />
     </p>
     <p>
-      <!-- <label for="categoria">Categoria:</label> -->
-      <input style="width: 800px; margin: 0 auto" type="text" name="categoria" value="<?= set_value_input( 
-      $datos,'categoria',$datos->ProdCategoria); ?>" class="form-control"/>
+    <div>
+      <select  style="width: 80%; margin: 0 auto;" name="categoria" class="form-control" id="Categorias">
+          <option value="<?php echo 'CatNombre'; ?>" selected>
+              <?php 
+                  foreach ($categorias as $cate) {
+                      ?>
+                      <option value="<?php echo $cate->idCategoria;?>">
+                          <?php echo $cate->CatNombre; ?>
+                      </option>
+                      <?php 
+                  }
+               ?>
+          </option>
+      </select>
+    </div>  
     </p>
     <p>
-      <!-- <label for="descripcion">Descripcion:</lab -->
       <input style="width: 800px; margin: 0 auto" type="text" name="descripcion" value="<?= set_value_input($datos,'descripcion',$datos->ProdDescripcion); ?>" class="form-control" />
     </p>
     <hr />
