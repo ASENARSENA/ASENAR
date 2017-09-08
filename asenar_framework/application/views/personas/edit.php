@@ -31,10 +31,11 @@
 					      <br>
 					      <input style="width: 800px; margin: 0 auto" type="text" name="apellido" value="<?= set_value_input($datos,'apellido',$datos->PerApellidos); ?>" class="form-control" autofocus="True" /> 
 					      <br>
-					      <input style="width: 800px; margin: 0 auto" type="text" name="idenficicacion" value="<?= set_value_input($datos,'idenficicacion',$datos->PerIdentificacion); ?>" class="form-control" autofocus="True" /> 
+					      <input style="width: 800px; margin: 0 auto" type="text" name="identificacion" value="<?= set_value_input($datos,'identificacion',$datos->PerIdentificacion); ?>" class="form-control" autofocus="True" /> 
 					      <br>
 					      <input style="width: 800px; margin: 0 auto" type="text" name="correo" value="<?= set_value_input($datos,'correo',$datos->PerEmail); ?>" class="form-control" autofocus="True" /> 
 					      <br>
+                <input style="width: 800px; margin: 0 auto" type="text" name="pass" value="<?= set_value_input($datos,'pass',$datos->PerContrasena); ?>" class="form-control" autofocus="True" /> 
 						   	<hr />
 						   	<!--<input type="hidden" name="id" value="<?= $id?>"/>-->
 						    <center>  <button class="btn" style="background: #ff9800" type="submit">Enviar</button></center>

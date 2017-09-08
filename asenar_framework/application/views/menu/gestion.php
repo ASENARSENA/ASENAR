@@ -2,30 +2,36 @@
 <br>
 <br>
 <br>
-<br>
-<br>
 <form>
-    <div class="col-lg-6 col-md-6">
-        <select class="form-control" name="opcJornada" id="opcJornada">
-            <option default value='0'>Selecione una jornada...</option>
-            <option value="DESAYUNO">Desayuno</option>
-            <option value="ALMUERZO">Almuerzo</option>
-            <option value="CENA">Cena</option>
-        </select>
-    </div><br><br>
+    <br><br>
 
-    <div class="col-lg-5 col-md-5">
+    <!-- <div class="col-lg-5 col-md-5">
         <input type="date" name='fechaMenu' id='fechaMenu'>
-    </div>
+    </div> -->
 
     <!-- Lista de Productos -->
     <div class="col-lg-12 col-md-12">
         <div class="card">
-            <div class="card-header" data-background-color="green">
-                <h4 class="title">Listado de Productos</h4>
-                <p class="category">Desayuno</p>
+            <div class="card-header" style=" background: rgb(240, 177, 96)">
+                <center><h2 class="title">Listado de Productos</h2></center>
+                <!-- <div class="col-lg-6 col-md-6"> -->
+    <!-- </div> -->
             </div>
-            <div class="card-content table-responsive">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card-content table-responsive">
+                        <select style="width: 80%" class="form-control" name="opcJornada" id="opcJornada">
+                            <option default value='0'>Selecione una jornada...</option>
+                            <option value="DESAYUNO">Desayuno</option>
+                            <option value="ALMUERZO">Almuerzo</option>
+                            <option value="CENA">Cena</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">   
+                <input style="margin-top: 45px;" type="date" name='fechaMenu' id='fechaMenu'>
+                </div>
+            </div>
             <?php
                 if($this->session->flashdata('mensaje')!='')
                 {
@@ -74,7 +80,7 @@
             </table>
             <div align="right">
                 <!-- <a href="almuerzo" class="btn btn-info" id="crearMenuDia">CREAR MENU DEL DIA</a> -->
-                <input class="btn btn-info" type="submit" id="crearMenuDia"; value="CREAR MENU DEL DIA">
+                <input class="btn" style="background: rgb(156, 12, 12)" type="submit" id="crearMenuDia"; value="CREAR MENU DEL DIA">
             </div>
         </div>
     </div>

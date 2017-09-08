@@ -44,14 +44,15 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="#" target="_blank">
-                            <i class="material-icons" >home</i>
+                            <i class="material-icons">home</i>
                             Inicio
                         </a>
                     </li> 
                     <li>
-                        <a href="<?= base_url()?>personas/perfil">
-                            <i class="material-icons">person</i> Perfil
-                        </a>
+                     
+                    <a href="<?= base_url()?>personas/perfil/<?php echo $this->session->userdata('id')?>">
+                            <i class="material-icons">person</i>Perfil
+                     </a>
                     </li>
                     <li>
                         <a href="<?= base_url()?>usuarios/perfil">

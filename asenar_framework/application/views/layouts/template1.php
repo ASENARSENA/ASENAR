@@ -50,8 +50,8 @@
 	                 <li>
 	                     <li role="presentation" class="dropdown ">	             
 	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">	      
-	                    	<i style="color: #fff" class="material-icons">person</i>
-	                        <p style="color: #fff">Gestioinar Productos</p>
+	                    	<i style="color: #fff" class="material-icons">restaurant</i>
+	                        <p style="color: #fff">Productos</p>
 	                    </a>
 	                    	<ul class="dropdown-menu">
 	                        	<li role="presentation"><a href="<?php echo base_url()?>productos">Ver Productos</a></li>
@@ -62,14 +62,14 @@
 	                </li>
 	               
 	                 	<a  href="<?php echo base_url()?>categorias">	      
-	                    	<i style="margin-left: 30px; color: #fff"  class="material-icons">more</i>
-	                        <p style="color: #fff">Gestioinar Categorias </p>
+	                    	<i style="margin-left: 30px; color: #fff"  class="material-icons">toc</i>
+	                        <p style="color: #fff">Categorias </p>
 	                    </a>
 	                
 	                 <li role="presentation" class="dropdown">
 	                    <a href="<?php echo base_url();?>Menu/gestion">
-	                        <i class="material-icons">people</i>
-	                        <p>Gestionar Menú</p>
+	                        <i style=" color: #fff" class="material-icons">apps</i>
+	                        <p style="color: #fff">Menú</p>
 	                    </a>
 	                </li>	        
 	            </ul>

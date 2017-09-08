@@ -40,6 +40,16 @@ class Acceso extends CI_Controller {
                  //     redirect(base_url()."productos");
                  // }
                 if($datos->PerTipoUsuario==2){
+                    //darle un nombre al array general de sessiones
+                    $this->session->set_userdata('cliente');
+                    //asignamos los datos a cada sessión por separado
+                    $this->session->set_userdata('id',$datos->idPersona);
+                    $this->session->set_userdata('Nombre',$datos->PerNombres);
+                    $this->session->set_userdata('Apellido',$datos->PerApellidos);
+                    $this->session->set_userdata('Correo',$datos->PerEmail);
+                    $this->session->set_userdata('Telefono',$datos->PerTelefono);
+                    $this->session->set_userdata('Direccion',$datos->PerDireccion);
+                    //redireccionamos a la url principal de los contenidos restringidos
                      redirect(base_url()."personas");
                     }
 

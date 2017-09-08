@@ -23,7 +23,7 @@ class Productos extends CI_Controller {
         }		
 	}
 
-	public function add()
+	public function add($id=null)
 	{
 
 		//zona de procesamiento del formulario

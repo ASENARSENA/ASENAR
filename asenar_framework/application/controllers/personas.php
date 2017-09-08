@@ -28,46 +28,47 @@ class Personas extends CI_Controller {
 
   
 
-	public function perfil(){
+	public function perfil($id=null){
     
 		$this->layout->setLayout("layoutCliente");
-		$datos=$this->personas_model->getUsuarios();
+		$datos=$this->personas_model->getUsuariosPorId($id);
 		$this->layout->view('perfil',compact('datos'));
 	}
 
 	public function edit($id=null){
 		
 		$this->layout->setLayout("layoutCliente");
-		//if (!$id) {         
-  //           show_404();
-  //       }
-  //       //CARGAMOS EL MODELO
-  		//$datos=$this->personas_model->getUsuariosPorId($id);
-      //    if ($this->input->post()) {
+		 if (!$id) {         
+          show_404();
+      }
+          //CARGAMOS EL MODELO
+  	$datos=$this->personas_model->getUsuariosPorId($id);
+           if ($this->input->post()) {
               
-      //        if ($this->form_validation->run('add_personas')) {
-      //           $data=array
-      //           (
-      //               'PerNombres'=>$this->input->post('nombre',true),
-      //               'PerApellidos'=>$this->input->post('apellido',true),
-      //               'PerIdentificacion'=>$this->input->post('identificacion',true),
-      //               'PerEmail'=>$this->input->post('correo',true),
-      //               'PerTelefono'=>$this->input->post('telefono',true),
-      //               'PerContrasena'=>$this->input->post('pass',true),
-      //               'PerTipoUsuario'=>$this->input->post('roll',true),
+               if ($this->form_validation->run('add_personas')) {
+                  $data=array
+                  (
+                      'PerNombres'=>$this->input->post('nombre',true),
+                      'PerApellidos'=>$this->input->post('apellido',true),
+                      'PerIdentificacion'=>$this->input->post('identificacion',true),
+                      'PerEmail'=>$this->input->post('correo',true),
+                      'PerTelefono'=>$this->input->post('telefono',true),
+                      'PerContrasena'=>$this->input->post('pass',true),
+                      'PerTipoUsuario'=>$this->input->post('roll',true),
                     
-      //           );
-      //         $this->productos_model->update($data,$this->input->post('id',true));
-      //         $this->session->set_flashdata('css','success');
-      //         $this->session->set_flashdata('mensaje','Su Perfil  se ha modificado  correctamente :D');
-      //           //LO REDIRECIONAMOS
-      //           redirect(base_url()."perfil"); 
-
-       $this->layout->view('edit',compact('datos','id'));	
-       }
-     
+                  );
+                
+                $this->personas_model->update($data,$this->input->post('id',true));
+                $this->session->set_flashdata('css','success');
+                $this->session->set_flashdata('mensaje','Su Perfil  se ha modificado  correctamente :D');
+                  //LO REDIRECIONAMOS
+                  redirect(base_url()."perfil"); 
+               }
+            }
+       $this->layout->view('edit' ,compact('datos'));	   
+    }
       //SOLO ENVIA CORREO SI TIENE HOSTING FALLA...GRAN PARTE TERMINADA
-	 /*public function enviarcorreo(){
+	 public function enviarcorreo(){
 
          $this->load->library('email');
          //de donde mandamos el correo
@@ -102,6 +103,7 @@ class Personas extends CI_Controller {
              echo $this->email->print_debugger();
          }
         
-     }*/
-}
+     }
+   
+ }
 
